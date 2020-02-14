@@ -11,19 +11,12 @@
     <artifactId>parent-pom</artifactId>
     <version>1.10.8</version>
   </parent>
-  <artifactId>centc434-validation-rules</artifactId>
+  <artifactId>pint-validation-rules</artifactId>
   <version>1.0.0</version>
-  <name>centc434-validation-rules</name>
-  <description>EN16931 - CEN/TC 434 validation rules</description>
-  <url>https://github.com/CenPC434/validation</url>
-  <inceptionYear>2016</inceptionYear>
-  <licenses>
-    <license>
-      <name>Apache 2</name>
-      <url>http://www.apache.org/licenses/LICENSE-2.0</url>
-      <distribution>repo</distribution>
-    </license>
-  </licenses>
+  <name>pint-validation-rules</name>
+  <description>PINT validation rules</description>
+  <url>https://github.com/oriol/PINT</url>
+  <inceptionYear>2020</inceptionYear>
   <build>
     <plugins>
       <plugin>
@@ -31,32 +24,6 @@
         <artifactId>ph-schematron-maven-plugin</artifactId>
         <version>5.2.0</version>
         <executions>
-<!--
--->
-          <execution>
-            <id>cii</id>
-            <goals>
-              <goal>convert</goal>
-            </goals>
-            <configuration>
-              <schematronDirectory>${basedir}/cii/schematron</schematronDirectory>
-              <xsltDirectory>${basedir}/cii/xslt</xsltDirectory>
-            </configuration>
-          </execution>
-<!--
--->
-          <execution>
-            <id>edifact</id>
-            <goals>
-              <goal>convert</goal>
-            </goals>
-            <configuration>
-              <schematronDirectory>${basedir}/edifact/schematron</schematronDirectory>
-              <xsltDirectory>${basedir}/edifact/xslt</xsltDirectory>
-            </configuration>
-          </execution>
-<!--
--->
           <execution>
             <id>ubl</id>
             <goals>

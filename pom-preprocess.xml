@@ -11,19 +11,12 @@
     <artifactId>parent-pom</artifactId>
     <version>1.10.8</version>
   </parent>
-  <artifactId>centc434-validation-rules</artifactId>
+  <artifactId>pint-validation-rules</artifactId>
   <version>1.0.0</version>
-  <name>centc434-validation-rules</name>
-  <description>EN16931 - CEN/TC 434 validation rules</description>
-  <url>https://github.com/CenPC434/validation</url>
-  <inceptionYear>2016</inceptionYear>
-  <licenses>
-    <license>
-      <name>Apache 2</name>
-      <url>http://www.apache.org/licenses/LICENSE-2.0</url>
-      <distribution>repo</distribution>
-    </license>
-  </licenses>
+  <name>pint-validation-rules</name>
+  <description>PINT validation rules</description>
+  <url>https://github.com/oriol/PINT</url>
+  <inceptionYear>2020</inceptionYear>
   <build>
     <plugins>
       <plugin>
@@ -32,33 +25,13 @@
         <version>5.2.0</version>
         <executions>
           <execution>
-            <id>cii</id>
-            <goals>
-              <goal>preprocess</goal>
-            </goals>
-            <configuration>
-              <sourceFile>${basedir}/cii/schematron/EN16931-CII-validation.sch</sourceFile>
-              <targetFile>${basedir}/cii/schematron/preprocessed/EN16931-CII-validation-preprocessed.sch</targetFile>
-            </configuration>
-          </execution>
-          <execution>
-            <id>edifact</id>
-            <goals>
-              <goal>preprocess</goal>
-            </goals>
-            <configuration>
-              <sourceFile>${basedir}/edifact/schematron/EN16931-EDIFACT-validation.sch</sourceFile>
-              <targetFile>${basedir}/edifact/schematron/preprocessed/EN16931-EDIFACT-validation-preprocessed.sch</targetFile>
-            </configuration>
-          </execution>
-          <execution>
             <id>ubl</id>
             <goals>
               <goal>preprocess</goal>
             </goals>
             <configuration>
-              <sourceFile>${basedir}/ubl/schematron/EN16931-UBL-validation.sch</sourceFile>
-              <targetFile>${basedir}/ubl/schematron/preprocessed/EN16931-UBL-validation-preprocessed.sch</targetFile>
+              <sourceFile>${basedir}/ubl/schematron/PINT-UBL-validation.sch</sourceFile>
+              <targetFile>${basedir}/ubl/schematron/preprocessed/PINT-UBL-validation-preprocessed.sch</targetFile>
             </configuration>
           </execution>
         </executions>
